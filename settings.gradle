@@ -1,0 +1,2 @@
+include ':myxposedapp', ':hhapplication', ':calculateclient', ':buttontoggle'
+rootProject.name='MyXPosed'

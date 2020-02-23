@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.men.hhapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CalculateInterface"></activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Splash2Activity" />
+        <activity android:name=".Splash3Activity" />
+
+        <service android:name=".service.MyTestService" />
+        <service android:name=".service.CalculateService" >
+            <intent-filter>
+                <action android:name="com.men.hhapplication.service.CalculateService" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name=".provider.MyTestProvider"
+            android:authorities="com.men.hhapplication.provider.mytest" />
+    </application>
+
+</manifest>

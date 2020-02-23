@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button
+        android:id="@+id/btn_closeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭所有"
+        android:onClick="onFinish"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/tv_circleText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="2"
+        />
+
+    <TextView
+        android:id="@+id/tv_circleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="你好啊"
+        app:layout_constraintBaseline_toBaselineOf="@id/btn_closeAll"
+        app:layout_constraintDimensionRatio="W,2:1"
+        app:layout_constraintLeft_toRightOf="@id/btn_closeAll"
+        app:layout_constraintRight_toLeftOf="@id/tv_thirdText"
+        app:layout_goneMarginLeft="10dp"
+        app:layout_constraintHorizontal_weight="3"
+        />
+
+    <TextView
+        android:id="@+id/tv_thirdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_circleText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_circleText"
+        app:layout_constraintHorizontal_weight="4"
+        android:text="第三个控件" />
+</android.support.constraint.ConstraintLayout>
